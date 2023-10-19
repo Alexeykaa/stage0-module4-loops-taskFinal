@@ -13,11 +13,14 @@ public class Pyramid {
     public void printPyramid(int cathetusLength) {
         for (int row = 1; row <= cathetusLength; row++) {
             StringBuilder s = new StringBuilder();
+            // add placeholder
             s.append(" ".repeat(cathetusLength - row));
             int width;
+            // from left to middle
             for (width = row; width > 0; width--) {
                 s.append(width);
             }
+            // to right
             for (width += 2; width <= row; width++) {
                 s.append(width);
             }
